@@ -23,6 +23,9 @@
     "colors": "^1.4.0",
     "inquirer": "^7.3.0"
   },
+  "bin":{
+    "gpt":"./cli.js"
+  },
   "bugs": {
     "url": "https://github.com/fabioluzm/generate-project-template/issues"
   },
