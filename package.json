@@ -1,0 +1,30 @@
+{
+  "name": "generate-project-template",
+  "version": "1.0.0",
+  "description": "Template generator for coding projects",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabioluzm/generate-project-template.git"
+  },
+  "keywords": [
+    "Templates",
+    "Express",
+    "Node",
+    "Mongoose",
+    "PWA"
+  ],
+  "author": "fabioluzm",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^7.3.0"
+  },
+  "bugs": {
+    "url": "https://github.com/fabioluzm/generate-project-template/issues"
+  },
+  "homepage": "https://github.com/fabioluzm/generate-project-template#readme"
+}
