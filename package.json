@@ -1,6 +1,6 @@
 {
   "name": "generate-project-template",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Template generator for coding projects",
   "main": "cli.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "Mongoose",
     "PWA"
   ],
-  "author": "fabioluzm",
+  "author": "Fábio Moreira",
   "license": "MIT",
   "dependencies": {
     "colors": "^1.4.0",
