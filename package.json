@@ -1,6 +1,6 @@
 {
   "name": "generate-project-template",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Template generator for coding projects",
   "main": "cli.js",
   "scripts": {
@@ -23,8 +23,8 @@
     "colors": "^1.4.0",
     "inquirer": "^7.3.0"
   },
-  "bin":{
-    "gpt":"./cli.js"
+  "bin": {
+    "gpt": "./cli.js"
   },
   "bugs": {
     "url": "https://github.com/fabioluzm/generate-project-template/issues"
