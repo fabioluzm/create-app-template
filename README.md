@@ -1,15 +1,16 @@
 # Template generator for coding projects
 
 To create a project, using `npx`, run:<br/>
-`npx generate-project-template my-project`
+`npx create-app-template my-project`
 
 To install in your system, using `npm`, run:<br/>
-`npm install generate-project-template`
+`npm install create-app-template`
 
 For a global instalation, using `npm`, run:<br/>
-`npm install -g generate-project-template`
+`npm install -g create-app-template`
 
 If installed using by `npm`, run:<br/>
-`gpt my-project`
+`cat my-project`<br/>
+`create-template my-project`<br/>
 
 Enjoy!

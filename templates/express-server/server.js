@@ -9,7 +9,7 @@ const connectDB = require('./config/db');
 dotenv.config({path: './config/.env'});
 
 // Connect to database
-connectDB();
+// connectDB();
 
 // Load router into server
 // Change router name to match your custom route

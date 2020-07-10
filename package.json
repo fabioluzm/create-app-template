@@ -1,14 +1,18 @@
 {
-  "name": "generate-project-template",
-  "version": "1.2.0",
+  "name": "create-app-template",
+  "version": "1.2.1",
   "description": "Template generator for coding projects",
   "main": "cli.js",
+  "files": [
+    ".gitignore",
+    "/templates"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fabioluzm/generate-project-template.git"
+    "url": "git+https://github.com/fabioluzm/create-app-template.git"
   },
   "keywords": [
     "Templates",
@@ -24,10 +28,11 @@
     "inquirer": "^7.3.0"
   },
   "bin": {
-    "gpt": "./cli.js"
+    "cat": "./cli.js",
+    "create-template": "./cli.js"
   },
   "bugs": {
-    "url": "https://github.com/fabioluzm/generate-project-template/issues"
+    "url": "https://github.com/fabioluzm/create-app-template/issues"
   },
-  "homepage": "https://github.com/fabioluzm/generate-project-template#readme"
+  "homepage": "https://github.com/fabioluzm/create-app-template#readme"
 }

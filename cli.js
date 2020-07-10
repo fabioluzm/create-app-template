@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const colors = require('colors');
 const fs = require('fs');
+const { exec, execSync } = require('child_process');
 
 // read templates from package template folder
 const CHOICES = fs.readdirSync(`${__dirname}/templates`);
@@ -27,6 +28,7 @@ const QUESTIONS = [
 // grab arguments from cli to be used as project name
 const argument = process.argv[2];
 const checkQuestions = (argument === undefined || argument === "") ? QUESTIONS : QUESTIONS[0];
+// const projectName = (checkQuestions === QUESTIONS[0]) ? argument : answers['project-name'];
 
 // current prompt directory
 const CURR_DIR = process.cwd();
@@ -39,20 +41,22 @@ inquirer.prompt(checkQuestions)
     
     // create template directory
     fs.mkdirSync(`${CURR_DIR}/${projectName}`);
-
-    // create template content
-    createDirectoryContents(templatePath, projectName);
     
-    // check if package.json exists and install depencies
+    // create template content
+    console.log('\nGenerating project...'.yellow.bold);
+    createDirectoryContents(templatePath, projectName);
+
+    // check if package.json exists
     if (fs.existsSync(`${templatePath}/package.json`)) {
       installDependencies(projectName);
     }
 
-    // generate git repository
     installGit(projectName);
-
-    console.log(`\n${projectName} created successfully.`.green.bold);
-    console.log('Happy hacking!'.green.bold);
+    
+    console.log('Done.'.cyan.bold);
+  })
+  .catch(err => {
+    console.log(err);
   });
 
 function createDirectoryContents (templatePath, newProjectPath) {
@@ -83,16 +87,27 @@ function createDirectoryContents (templatePath, newProjectPath) {
 }
 
 const installDependencies = (projectName) => {
-  const child_process = require('child_process');
-  const npmInstall = 'npm i'
-  child_process.execSync(`cd ${projectName} && ${npmInstall}`);
-  // child_process.execSync(`cd ${projectName} && ${npmInstall}`,{stdio:[0,1,2]});
+  execSync(`cd ${projectName} && npm install --silent`, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`exec error: ${error}`.red.bold);
+      return;
+    }
+    // console.log(`stdout: ${stdout}`);
+    // console.error(`stderr: ${stderr}`);
+  });
 }
 
 const installGit = (projectName) => {
-  const child_process = require('child_process');
   const gitInit = 'git init';
   const gitAdd = 'git add .';
-  const gitCommit = 'git commit -m "Initialize project using Generate Project Template"';
-  child_process.execSync(`cd ${projectName} && ${gitInit} && ${gitAdd} && ${gitCommit}`);
+  const gitCommit = 'git commit -m "Initialize project using Create App Template"';
+
+  execSync(`cd ${projectName} && ${gitInit} && ${gitAdd} && ${gitCommit}`, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`exec error: ${error}`);
+      return;
+    }
+    // console.log(`stdout: ${stdout}`);
+    // console.error(`stderr: ${stderr}`);
+  });
 }
