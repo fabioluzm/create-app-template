@@ -3,7 +3,9 @@
 
 ### Description:
 Express server app, with MCR *(Model-Controller-Router)* pattern,<br/>
-*MONGODB* config, *MCR* ready schemas and *API CRUD* operations.
+*MONGODB* config, *MCR* ready schemas and *API CRUD* operations.<br/>
+<br/>
+Create `.env` file to use environment variables.
 
 ### Project dependencies:
 1. Express
@@ -14,18 +16,11 @@ Express server app, with MCR *(Model-Controller-Router)* pattern,<br/>
 
 ### Dev dependencies:
 1. Nodemon
-2. Concurrently
 ___
 To run the node server:<br/>
 `npm run start`
 
-To use nodemon to keep track of changes:<br/>
+To use nodemon to prevent restart server on changes:<br/>
 `npm run server`
-
-On a client setup:<br/>
-`npm run client`
-
-to run both servers at same time run:<br/>
-`npm run dev`
 ___
 Enjoy!

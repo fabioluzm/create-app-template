@@ -1,4 +1,3 @@
-const path = require('path');
 const express = require('express');
 const dotenv = require('dotenv');
 const colors = require('colors');
@@ -13,7 +12,7 @@ dotenv.config({path: './config/.env'});
 
 // Load router into server
 // Change router name to match your custom route
-// const router = ('./routes/router');
+const examplesRouter = require('./routes/examples.rtr');
 
 // Initialize express app
 const app = express();
@@ -28,7 +27,7 @@ if(process.env.NODE_ENV === 'development') {
 
 // Route middleware to be used
 // Change router name to match your custom route
-// app.use('/api/v1/router', router);
+app.use('/api/v1/examples', examplesRouter);
 
 // Environment variables
 // Create a .env file in the config folder
