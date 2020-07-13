@@ -1,6 +1,6 @@
 {
   "name": "create-app-template",
-  "version": "1.2.1",
+  "version": "1.0.0",
   "description": "Template generator for coding projects",
   "main": "cli.js",
   "files": [
@@ -29,7 +29,7 @@
   },
   "bin": {
     "cat": "./cli.js",
-    "create-template": "./cli.js"
+    "create-app-template": "./cli.js"
   },
   "bugs": {
     "url": "https://github.com/fabioluzm/create-app-template/issues"
