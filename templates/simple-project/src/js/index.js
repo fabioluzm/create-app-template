@@ -1,1 +1,1 @@
-console.log('JavaScript loaded into app');
+console.log('JavaScript loaded into project');
