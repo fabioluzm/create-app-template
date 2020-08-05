@@ -1,18 +1,3 @@
-// use em for mediaqueries ( 1em = 16px )
-// md = 640px, lg = 1024px, xl = 1400px 
-$breakpoints-up:(
-  "medium": "40em",
-  "large": "64em",
-  "xlarge": "87.5em",
-);
-
-// sm = 639px, md = 1023px, lg = 1399px 
-$breakpoints-down:(
-  "small": "39.9375em",
-  "medium": "63.9375em",
-  "large": "87.4375em",
-);
-
 // color variables
 $white: #fff;
 $black: #000;
