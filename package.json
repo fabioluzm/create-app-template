@@ -1,6 +1,6 @@
 {
   "name": "create-app-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Template generator for coding projects",
   "main": "cli.js",
   "files": [
