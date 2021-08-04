@@ -1,1 +1,0 @@
-console.log('JavaScript loaded into project');
